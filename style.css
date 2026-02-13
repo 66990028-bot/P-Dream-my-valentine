@@ -1,0 +1,83 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:-apple-system, BlinkMacSystemFont, Arial, sans-serif;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#ff9ac6,#ffd6ea);
+color:white;
+padding:24px;
+overflow:hidden;
+}
+
+h1{
+font-size:clamp(30px,7vw,52px);
+margin-bottom:18px;
+}
+
+p{
+font-size:clamp(18px,4.5vw,22px);
+margin-bottom:12px;
+line-height:1.5;
+}
+
+button{
+width:90%;
+max-width:320px;
+padding:18px;
+font-size:18px;
+border:none;
+border-radius:18px;
+background:white;
+color:#ff4da6;
+font-weight:bold;
+margin-top:12px;
+cursor:pointer;
+}
+
+.button-group{
+display:flex;
+flex-direction:column;
+gap:12px;
+width:100%;
+align-items:center;
+}
+
+img{
+width:80%;
+max-width:320px;
+border-radius:20px;
+margin-top:15px;
+}
+
+.fade{
+animation:fadein 1s ease;
+}
+
+@keyframes fadein{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1;}
+}
+
+/* Falling hearts */
+.heart{
+position:fixed;
+top:-10%;
+font-size:24px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(120vh);
+opacity:0;
+}
+}
